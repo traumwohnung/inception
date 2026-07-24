@@ -1,0 +1,5 @@
+error: cause fields cannot be #[hide]
+ --> tests/ui/source_context.rs:8:9
+  |
+8 |         error: std::io::Error,
+  |         ^^^^^^^^^^^^^^^^^^^^^

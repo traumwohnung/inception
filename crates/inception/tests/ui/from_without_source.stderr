@@ -1,0 +1,5 @@
+error: #[from] requires #[caused_by] or #[caused_by(inception)]
+ --> tests/ui/from_without_source.rs:7:9
+  |
+7 |         value: String,
+  |         ^^^^^^^^^^^^^

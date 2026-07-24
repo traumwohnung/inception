@@ -1,0 +1,19 @@
+[workspace]
+resolver = "3"
+members = [
+    "crates/inception",
+    "crates/inception-derive",
+]
+
+[workspace.package]
+edition = "2024"
+license = "MIT"
+publish = false
+
+[workspace.lints.clippy]
+pedantic = "warn"
+
+[workspace.dependencies]
+serde = { version = "1", default-features = false, features = ["alloc", "derive"] }
+serde_json = "1"
+tracing = { version = "0.1", default-features = false }

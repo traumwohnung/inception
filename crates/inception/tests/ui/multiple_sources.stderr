@@ -1,0 +1,5 @@
+error: an inception variant may have only one error
+  --> tests/ui/multiple_sources.rs:16:9
+   |
+16 |         nested: Nested,
+   |         ^^^^^^^^^^^^^^

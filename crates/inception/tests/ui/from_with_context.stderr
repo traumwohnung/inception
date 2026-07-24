@@ -1,0 +1,11 @@
+error: a #[from] variant must contain only its cause field
+  --> tests/ui/from_with_context.rs:5:12
+   |
+ 5 |       Failed {
+   |  ____________^
+ 6 | |         #[from]
+ 7 | |         #[caused_by]
+ 8 | |         error: std::io::Error,
+ 9 | |         detail: String,
+10 | |     },
+   | |_____^

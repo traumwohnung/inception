@@ -1,0 +1,15 @@
+error[E0599]: no associated function or constant named `Failed` found for struct `DirectConstruction` in the current scope
+ --> tests/ui/direct_construction.rs:9:33
+  |
+1 | #[inception::error]
+  | ------------------- associated function or constant `Failed` not found for this struct
+...
+9 |     let _ = DirectConstruction::Failed;
+  |                                 ^^^^^^ associated function or constant not found in `DirectConstruction`
+  |
+help: there is an associated function `failed` with a similar name
+ --> tests/ui/direct_construction.rs:1:1
+  |
+1 | #[inception::error]
+  | ^^^^^^^^^^^^^^^^^^^
+  = note: this error originates in the attribute macro `inception::error` (in Nightly builds, run with -Z macro-backtrace for more info)

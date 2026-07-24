@@ -1,0 +1,18 @@
+error[E0277]: the trait bound `std::io::Error: InceptionError` is not satisfied
+ --> tests/ui/wrong_onion_source.rs:1:1
+  |
+1 | #[inception::error]
+  | ^^^^^^^^^^^^^^^^^^^ the trait `InceptionError` is not implemented for `std::io::Error`
+  |
+help: the following other types implement trait `InceptionError`
+ --> tests/ui/wrong_onion_source.rs:1:1
+  |
+1 | #[inception::error]
+  | ^^^^^^^^^^^^^^^^^^^ `WrongInceptionSource`
+  |
+ ::: src/inceptioned.rs
+  |
+  | impl<E: StdError + Send + Sync + 'static> InceptionError for Inceptioned<E> {
+  | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ `Inceptioned<E>`
+  = note: required for the cast from `&std::io::Error` to `&(dyn InceptionError + 'static)`
+  = note: this error originates in the attribute macro `inception::error` (in Nightly builds, run with -Z macro-backtrace for more info)

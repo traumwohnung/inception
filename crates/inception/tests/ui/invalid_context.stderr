@@ -1,0 +1,5 @@
+error: duplicate #[hide]
+ --> tests/ui/invalid_context.rs:7:9
+  |
+7 |         #[hide]
+  |         ^^^^^^^
